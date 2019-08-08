@@ -18,7 +18,7 @@ app.get("*", (request, response) => {
   });
   
 const replaceMetaTitle = (html, title) => {
-    title = "/"+ title +" Title";
+    title = "/"+ title +" Title #"+ Math.floor((Math.random() * 100) + 1);             //API call instead :)
     return html.replace(titlePlaceholder, title);
 }
 
