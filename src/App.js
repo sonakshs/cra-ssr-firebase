@@ -2,33 +2,22 @@ import React from 'react';
 import logo from './logo.svg';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
+
 const Home = () => (
   <div>
     Home
   </div>
 )
 
-const About = () => (
-  <div>
-    About
-  </div>
-)
-
-const Code = () => (
-  <div>
-    Code
-  </div>
-)
-
 const Contact = () => (
   <div>
-    Contact
+    <a style={{color:"white"}} target="__blank" href="https://github.com/sonakshs/cra-ssr-firebase">View Source</a>
   </div>
 )
 
-const Info = () => (
+const LinkComponent = () => (
   <div>
-    info
+    Hard refresh to see dynamic title working.
   </div>
 )
 
@@ -36,19 +25,13 @@ const MainMenu = () => {
 return (
 <div>
   <Link to="/">
-    <button>home</button>
+    <button>Home</button>
   </Link>
-  <Link to="/about">
-    <button>About</button>
-  </Link>
-  <Link to="/code">
-    <button>code</button>
+  <Link to="/link">
+    <button>Link Test</button>
   </Link>
   <Link to="/contact">
-    <button>contact</button>
-  </Link>
-  <Link to="/info">
-    <button>info</button>
+    <button>Contact Us</button>
   </Link>
 </div>
 );
@@ -61,26 +44,12 @@ function App() {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <MainMenu />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          <div>
+          <div style={{color: "white", padding:"2em"}}>
             <Route exact path="/" component={Home} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/code" component={Code} />
             <Route exact path="/contact" component={Contact} />
-            <Route exact path="/info" component={Info} />
+            <Route exact path="/link" component={LinkComponent} />
           </div>
         </header>
-        
       </div>
     </Router>
   );
