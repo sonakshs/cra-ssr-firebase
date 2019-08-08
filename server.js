@@ -17,7 +17,6 @@ app.get("*", function(request, response) {
     .toString();
   const titlePlaceholder = "__TITLE_PLACEHOLDER__";
   const title = "My New Title";
-  console.log(titlePlaceholder, title,'title')
   indexHTML = indexHTML.replace(titlePlaceholder, title);
   response.status(200).send(indexHTML);
 });

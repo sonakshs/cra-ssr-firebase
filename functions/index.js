@@ -7,16 +7,14 @@ const app = express();
 
 // app.use("/static", express.static(path.join(__dirname, "../build/static")));
 
-app.get("*", (req, response) => {
+app.get("*", (request, response) => {
     response.set("Cache-Control", "no-store");
-    console.log(util.inspect(req.params),'req')
-    console.log("dirname", __dirname)
+    const reqpath = request.path ? request.path.split("/") : req.path;
     let indexHTML = fs
       .readFileSync(path.join(__dirname, "hosting", "index.html"))
       .toString();
     const titlePlaceholder = "__TITLE_PLACEHOLDER__";
-    const title = "My New Title";
-    console.log(titlePlaceholder, title,'title')
+    const title = "/"+ reqpath[1]+" Title";
     indexHTML = indexHTML.replace(titlePlaceholder, title);
     response.status(200).send(indexHTML);
   });
