@@ -19,6 +19,9 @@ app.get("*", (request, response) => {
   
 const replaceMetaTitle = (html, title) => {
     title = "/"+ title +" Title #"+ Math.floor((Math.random() * 100) + 1);             //API call instead :)
+    ogPlaceholder = '<meta property="og:title" content="Default-Title"/>';
+    ogRandomTitle = `<meta property="og:title" content="${title}"/>`;
+    html = html.replace(ogPlaceholder, ogRandomTitle)
     return html.replace(titlePlaceholder, title);
 }
 
