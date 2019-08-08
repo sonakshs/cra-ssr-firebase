@@ -7,14 +7,19 @@ const fs = require("fs");
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-app.use(express.static(path.join(__dirname, "build")));
 
-app.get("/*", function(req, res) {
-  res.set("Cache-Control", "public, max-age=300, s-maxage=600");
+app.use("/static", express.static(path.join(__dirname, "build/static")));
+
+app.get("*", function(request, response) {
+  response.set("Cache-Control", "no-store");
   let indexHTML = fs
     .readFileSync(path.join(__dirname, "build", "index.html"))
     .toString();
-  res.status(200).send(indexHTML);
+  const titlePlaceholder = "__TITLE_PLACEHOLDER__";
+  const title = "My New Title";
+  console.log(titlePlaceholder, title,'title')
+  indexHTML = indexHTML.replace(titlePlaceholder, title);
+  response.status(200).send(indexHTML);
 });
 
 app.listen(PORT, console.log(`listening on port ${PORT}`));
