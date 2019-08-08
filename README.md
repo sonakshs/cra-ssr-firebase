@@ -1,8 +1,11 @@
-Generate Dynamic Meta tags, OG tags in create-react-app, using an express middleware hosted in firebase functions
+Generate Dynamic Meta tags, OG tags for SEO in create-react-app, using an expressJS middleware hosted in firebase functions.
 
 
 ### [[LIVE DEMO]](https://cra-ssr-firebase.firebaseapp.com/)
-Go to [/links](https://cra-ssr-firebase.firebaseapp.com/links) or [/contact](https://cra-ssr-firebase.firebaseapp.com/contacts) to see dynamic titles generated.
+Go to [/links](https://cra-ssr-firebase.firebaseapp.com/links) or [/contact](https://cra-ssr-firebase.firebaseapp.com/contacts) to see dynamic titles generated.     
+View Source to see what the crawlers and bots will see.    
+The tags generated inside the react app(using [React Helmet](https://github.com/nfl/react-helmet) or any other library will work nonetheless).    
+This only affects the initially rendered tags, and what bots/crawlers see or links unfurlings in Slack, WhatsApp, Twitter for SEO.
 
 ## Set up
 
@@ -79,7 +82,9 @@ Deploys the firebase app and firebase cloud functions.
 
 [Create React App](https://facebook.github.io/create-react-app/docs/getting-started)     
 [Hosting in Firebase](https://firebase.google.com/docs/hosting)     
-[Cloud Functions for Firebase](https://firebase.google.com/docs/functions)    
+[Cloud Functions for Firebase](https://firebase.google.com/docs/functions)  
+[ExpressJS](https://expressjs.com/)    
+[Meta Tags and SEO](https://www.wordstream.com/meta-tags)
 
 
 

@@ -1,4 +1,5 @@
 //ExpressJS server to host the static build/ 
+// Run `node server.js` to start server
 
 const express = require("express");
 const path = require("path");
