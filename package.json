@@ -1,6 +1,6 @@
 {
   "name": "cra-ssr-firebase",
-  "version": "0.1.10",
+  "version": "0.1.12",
   "private": true,
   "description": "Generate Dynamic Meta tags, OG tags in React, bundled with create-react-app, using an expressJS middleware hosted in firebase functions.",
   "keywords": [

@@ -2,8 +2,7 @@ Generate Dynamic Meta tags, OG tags in create-react-app, using an express middle
 
 
 ### [[LIVE DEMO]](https://cra-ssr-firebase.firebaseapp.com/)
-Go to [/links](https://cra-ssr-firebase.firebaseapp.com/links) or [/contact](https://cra-ssr-firebase.firebaseapp.com/contacts)    
-Refresh (Ctrl/Cmd + R) to see dynamic titles generated.
+Go to [/links](https://cra-ssr-firebase.firebaseapp.com/links) or [/contact](https://cra-ssr-firebase.firebaseapp.com/contacts) to see dynamic titles generated.
 
 ## Set up
 
